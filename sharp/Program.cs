@@ -6,35 +6,18 @@ namespace sharp
     {
         static void Main(string[] args) // primary run method, 'start method'
         {
-            // Step 2
-            Add(4, 8);
-            // Step 3
-            int result = Add(4, 8, 12);
-            if (result > 10)
-            {
-                Console.WriteLine("Result is larger then 10!");
-            }
-            else
-            {
-                Console.WriteLine("Result is smaller than or equal to 10");
-            }
-            // Step 4
+            // Arrays, man.
+            int[] numbers = new int[5]; //creates an empty object (in this case, an array) of five ints
+            numbers[0] = 12; // Sets first element to 12
+            numbers[1] = 3;
+            numbers[2] = 5; // The rest default to 0
 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
 
             Console.ReadKey();
         }
-
-        // Step 2 //
-        public static void Add(int num01, int num02)
-        {
-            Console.WriteLine(num01 + num02);
-        }
-        // Step 3 //
-        public static int Add(int num01, int num02, int num03)
-        {
-            return (num01 + num02 + num03);
-        }
-
-
     }
 }
